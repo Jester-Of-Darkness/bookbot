@@ -1,4 +1,5 @@
 from stats import count_words
+from stats import get_chars_report
 
 def get_book_text():
     with open("books/frankenstein.txt") as f:
@@ -6,5 +7,6 @@ def get_book_text():
 
     return book_content
 
-if __name__ == "__main__":
-    print(f"{count_words()} words found in the document")
+
+book_text = get_book_text()
+word_count_result = count_words(book_text)
