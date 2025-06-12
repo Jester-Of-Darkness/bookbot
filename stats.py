@@ -15,9 +15,8 @@ def get_chars_report(text_content):
     sorted_report = sorted(report_list, key=sort_on, reverse=True)
     return sorted_report
 
-def count_words():
-    from main import get_book_text
-    word_list = get_book_text().split()
+def count_words(text_content):
+    word_list = text_content.split()
     word_count = len(word_list)
     return word_count
 
