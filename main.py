@@ -7,6 +7,15 @@ def get_book_text():
 
     return book_content
 
-
-book_text = get_book_text()
-word_count_result = count_words(book_text)
+if __name__ == "__main__":
+    book_text = get_book_text()
+    word_count_result = count_words()
+    char_report_list = get_chars_report(book_text)
+    print("============ BOOKBOT ============")
+    print("Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count ----------")
+    print(f"Found {word_count_result} total words")
+    print("--------- Character Count -------")
+    for item in char_report_list:
+        print(f"{item['char']}: {item['num']}")
+    print("============= END ===============")
